@@ -112,7 +112,7 @@ section.block{padding-top:clamp(16px,2vw,20px)}
 .docs .ic{width:56px;height:56px;border-radius:16px;background:var(--navy);display:grid;place-items:center;color:var(--teal)}
 .docs .ic svg{width:26px;height:26px}
 .docs .m{flex:1;min-width:220px}
-.docs b{font:700 21px/1.2 var(--font);letter-spacing:-.02em;display:flex;align-items:center;gap:10px}
+.docs b{font:700 21px/1.2 var(--font);letter-spacing:-.02em;display:flex;align-items:center;flex-wrap:wrap;gap:6px 10px}
 .docs p{color:var(--text-2);margin-top:4px}
 .lock{display:inline-flex;align-items:center;gap:5px;font:600 11.5px var(--font);letter-spacing:.04em;text-transform:uppercase;color:var(--teal-d);
   background:var(--teal-soft);padding:4px 8px;border-radius:7px}
@@ -146,10 +146,13 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   .stats{grid-template-columns:1fr 1fr}
   .grid2,.cards{grid-template-columns:1fr}
 }
+.hero .wrap>*{min-width:0}
+@media (max-width:380px){.pill{padding:10px;gap:9px}.pill .ic{width:32px;height:32px}.pill b{font-size:14px}}
 @media (max-width:440px){
   .cta .btn{flex:1 1 100%}
   .stat{padding:16px 14px}.stat .v{font-size:23px}.stats{padding:8px;gap:8px}
   .docs .btn{width:100%}
+  .docs{gap:16px}.docs .m{flex:1 1 100%;min-width:0}.docs .ic{width:48px;height:48px;border-radius:14px}
   .bar .btn span{display:none}
 }
 @media print{.bar,.cta,.docs .btn{display:none!important}.rv{opacity:1;transform:none}}
